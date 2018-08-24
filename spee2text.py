@@ -4,6 +4,7 @@ import webbrowser
 r = sr.Recognizer()
 mic = sr.Microphone()
 with mic as source:
+	print("Say what you wnat to search")
 	audio = r.listen(source)
 url ='https://www.google.co.in/search?&q='+r.recognize_google(audio)
 webbrowser.open_new(url)
